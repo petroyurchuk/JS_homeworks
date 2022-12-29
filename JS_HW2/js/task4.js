@@ -1,13 +1,10 @@
 const formatString = function (string) {
-  if (string.length && string.length < 40) {
-    return string;
-  } else if (string.length > 40) {
-    let resString = string.substr(0, 40) + "...";
-    return resString;
-  } else {
-    console.log("String is empty");
-  }
+  let resString = string.substr(0, 40) + "...";
+  if (string.length && string.length < 40) return string;
+  if (string.length > 40) return resString;
+  return "String is empty";
 };
+console.log(formatString(""));
 
 console.log(formatString("Curabitur ligula sapien, tincidunt non."));
 // повернеться оригінальний рядок
