@@ -16,7 +16,7 @@ const invokeInventoryAction = function (itemName, action) {
   action(itemName);
 };
 
-invokeInventoryAction("Medkit", (itemName) => inventory.add(itemName));
+invokeInventoryAction("Medkit", inventory.add.bind(inventory));
 // Invoking action on Medkit
 // Adding Medkit to inventory
 
